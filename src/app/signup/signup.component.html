@@ -1,0 +1,50 @@
+<section class="vh-100" >
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-center h-100">
+         <div class=".col col-xl-9">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 col-lg-6" >
+                  <img src="../assets/signup.webp" class="img-fluid">
+                </div>
+<div class="col-md-6 col-lg-6 align-items-center">
+    <div class="card-body p-4 p-lg-5 text-black">
+        <form >
+            <div class="d-flex align-items-center mb-3 pb-1">
+                <i class="fas fa-cubes fa-2x me-3" style="color:orange"></i>
+                <span class=" h1 fw-bold mb-0">SignUp</span>
+                </div>
+                <h5 class="fw-normal mb-3 pb-2" style="letter-spacing: 1px;">SignUp into your Account</h5>
+                <div class="form-outline mb-2">
+                    <label class="form-label">Name</label>
+                    <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" id="name" placeholder="Enter your name"  class="form-control form-comtrol-lg">
+                </div>
+
+
+                <div class="form-outline mb-2">
+                    <label class="form-label">Email address</label>
+                    <input type="email"  [(ngModel)]="email" [ngModelOptions]="{standalone: true}"  id="email" placeholder="Enter your email" class="form-control form-comtrol-lg">
+                </div>
+                <div class="form-outline mb-2">
+                    <label class="form-label">Password</label>
+                    <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" id="password" placeholder="Enter your Password" class="form-control form-comtrol-lg">
+                </div>
+
+                    <div class="pt-1 mb-3 text-center">
+                        <button class="btn btn-success"   type="submit" (click)= "save()">SignUp</button>
+                    </div>
+                    <p class="mt-5 pb-lg-2"> Already have an account?
+                    <a  routerLink="/contacts/save"style="color:black;cursor:pointer;font-weight:700;">Login here</a>
+                    </p>
+            </form>
+    </div>
+</div>
+ </div>
+ </div>
+</div>
+</div>
+</div>
+
+</section>
+
+

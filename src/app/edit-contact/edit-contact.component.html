@@ -1,0 +1,75 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <p class="h3 fw-bold text-primary"><i class="fa fa-pen">&nbsp;</i>Edit Contact</p>
+            <p class="fst-italic mt-1">This app alone stores contact info, associated tasks, call logs, email records,
+                notes, files, and pipeline status. Also, you can access online communication data, including last
+                interaction time, interaction mode, and any other collected custom data.</p>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="image">
+              <img src="../assets/pic1.png" class="img-fluid">
+              </div>
+          </div>
+    
+<!-- Edit contact form-->
+<div class="col-md-6">
+  <div class="card">
+      <h5>Edit Contact</h5>
+      <div class="row">
+  <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <div class="form-group mb-1">
+        <label for="name"> Name:</label><br>
+        <input type="text" class="form-control"  id="name"  name="name" [(ngModel)]="contact.name" placeholder="Enter Name"  >
+        </div>
+        
+        <div class="form-group mb-1">
+          <label for="mobile">Mobile:</label><br>
+          <input type="number" class="form-control" id="mobile" name="mobile" [(ngModel)]="contact.mobile" placeholder="phone number">
+          </div>
+         
+
+          <div class="form-group mb-1">
+            <label for="email"> Email:</label><br>
+            <input type="Email" class="form-control" id="email"  name="email"  [(ngModel)]="contact.email" placeholder="Enter Email" >
+            </div>
+
+            
+
+            <div class="form-group mb-1">
+              <label for="company">Company:</label><br>
+              <input type="text" class="form-control" id="companyname"  name="companyname" [(ngModel)]="contact.company"  placeholder="Enter Company" >
+              </div>
+
+              
+          
+              <div class="form-group mb-1">
+                <label for="title"> Title:</label><br>
+                <input type="text" class="form-control"  id="title"  name="title"  [(ngModel)]="contact.title" placeholder=" Enter Title"  >
+                </div>
+
+                
+
+                <div class="form-group mb-1">
+                  <label for="city"> City</label><br>
+                  <input type="text" class="form-control"  id="city"  name="city" [(ngModel)]="contact.city"  placeholder=" Enter City">
+                  </div>
+
+                 
+          
+          <div class="mb-2">      
+            <button type="submit" [disabled]="!contactForm.form.valid"
+            class="btn btn-info">Update</button>
+          <a routerLink="/contacts/home" class="btn btn-warning ms-2">Back</a>
+      </div>
+      </form>
+      </div>
+  </div>
+
+
+
+
